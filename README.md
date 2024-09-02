@@ -59,3 +59,9 @@ METHOD: GET
 
 /wlan/clients
 ```
+## Build
+
+```bash
+GOOS=linux GOARCH=mipsle GOMIPS=softfloat go build -trimpath -ldflags="-s -w" -o app
+upx --best app
+```
